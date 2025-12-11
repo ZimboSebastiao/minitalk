@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 21:31:23 by zimbo             #+#    #+#             */
-/*   Updated: 2025/12/10 00:15:17 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/12/11 17:02:08 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,8 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	ft_printf("📤 Sending message to the server with PID %d\n", pid);
-	ft_printf("📝 Message: %s\n", argv[2]);
+	ft_printf("Message: %s\n", argv[2]);
 	ft_send_message(pid, argv[2]);
-	ft_printf("✅ Message sent successfully!\n");
+	ft_printf("Message sent successfully!\n");
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 21:31:18 by zimbo             #+#    #+#             */
-/*   Updated: 2025/12/10 00:16:32 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/12/11 17:02:03 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,8 @@ int	main(void)
 {
 	ft_init_server();
 	ft_printf("🚀 Server started!\n");
-	ft_printf("📡 Server PID: %d\n", getpid());
-	ft_printf("⏳ Waiting for messages...\n");
+	ft_printf("Server PID: %d\n", getpid());
+	ft_printf("Waiting for messages...\n");
 	ft_setup_signal_handler();
 	while (1)
 		pause();
