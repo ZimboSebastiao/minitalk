@@ -136,8 +136,7 @@ kill [PID]
 ### Testando o Cliente
 ```bash
 # Inicie o servidor primeiro
-./server &
-SERVER_PID=$!
+./server & SERVER_PID=$!
 
 # Teste o cliente com valgrind
 valgrind --leak-check=full --show-leak-kinds=all ./client $SERVER_PID "Teste"

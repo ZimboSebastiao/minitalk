@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 21:37:17 by zalberti          #+#    #+#             */
-/*   Updated: 2025/12/05 18:45:17 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/12/12 11:37:58 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static int	ft_conversion(char type, va_list args)
 	{
 		ft_putchar('%');
 		i = 1;
-	}	
+	}
 	return (i);
 }
 
@@ -74,10 +74,3 @@ int	ft_printf(const char *fmt, ...)
 	va_end(args);
 	return (accumulator);
 }
-
-
-// int main()
-// {
-// 	ft_printf("%s zimbo %", "teste");
-// 	printf("%s zimbo %", "teste");
-// }

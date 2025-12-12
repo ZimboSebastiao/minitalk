@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 21:31:23 by zimbo             #+#    #+#             */
-/*   Updated: 2025/12/12 10:41:24 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/12/12 11:34:52 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,12 @@ void	ft_confirmation_handler(int signum)
 
 void	ft_send_char(int pid, char c)
 {
-	int	bit;
 	int	i;
 
 	i = 0;
 	while (i < 8)
 	{
-		bit = (c >> i) & 1;
-		g_confirmation_received = 0;
-		if (bit == 1)
-			kill(pid, SIGUSR1);
-		else
-			kill(pid, SIGUSR2);
-		while (!g_confirmation_received)
-			usleep(50);
+		ft_send_bit(pid, (c >> i) & 1);
 		i++;
 	}
 }

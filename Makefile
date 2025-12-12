@@ -9,8 +9,10 @@ INC_DIR		= inc
 LIB_DIR		= lib
 
 # Fontes
-CLIENT_SRC	= $(SRC_DIR)/client/ft_client.c
-SERVER_SRC	= $(SRC_DIR)/server/ft_server.c
+CLIENT_SRC	= $(SRC_DIR)/client/ft_client.c \
+			  $(SRC_DIR)/client/ft_states_client.c
+SERVER_SRC	= $(SRC_DIR)/server/ft_server.c \
+              $(SRC_DIR)/server/ft_states_server.c
 
 # Objetos
 CLIENT_OBJ	= $(CLIENT_SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
