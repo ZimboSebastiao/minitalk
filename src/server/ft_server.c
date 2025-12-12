@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 21:31:18 by zimbo             #+#    #+#             */
-/*   Updated: 2025/12/11 17:02:03 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/12/11 17:04:11 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ static void	ft_init_server(void)
 void	ft_handler_signal(int signum, siginfo_t *info, void *context)
 {
 	(void)context;
-
 	if (g_server.client_pid == 0)
 	{
 		g_server.client_pid = info->si_pid;
